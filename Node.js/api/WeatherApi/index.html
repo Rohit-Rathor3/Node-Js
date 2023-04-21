@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="./weatherApi.js"></script>
+    <title>Weather</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="wave-one"></div>
+        <div class="wave-two"></div>
+        <div class="wave-three"></div>
+        <div id="weathercon"><i class="fas fa-sun" style="color: yellow;"></i></div>
+        <div class="info">
+            <h2 class="location">{%location%} , {%country%}</h2>
+            <p id="date"> TUE | APR 06 | 12:50 AM</p>
+            <h1 class="tmep">{%tempVal%} &deg;C</h1>
+            <h3 class="tempmin_max">Min {%tempMin%} &deg;C | Max {%tempMax%} &deg;C</h3>
+        </div>
+    </div>
+    <script>
+        let icon = document.getElementById("weathercon");
+        var curDate = document.getElementById("date");
+        const tempStatus = "{%statusCode%};"
+        if (tempStatus == "Sunny") {
+            icon.innerHTML = '<i class="fas fa-sun" style="color: #eccc68;"></i>'
+        } else if (tempStatus == "Clouds") {
+            icon.innerHTML = '<i class="fas fa-sun" style="color: #f1f2f6;"></i>'
+        } else if (tempStatus == "Rainy") {
+            icon.innerHTML = '<i class="fas fa-sun" style="color: #a4b0be;"></i>'
+        } else if (tempStatus == "Clear") {
+            icon.innerHTML = '<i class="fas fa-sun" style="color: white;"></i>'
+        } else {
+            icon.innerHTML = '<i class="fas fa-sun" style="color: red"></i>'
+        }
+
+        const getCurrentDay = () => {
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tuesday";
+            weekday[3] = "Wednesday";
+            weekday[4] = "Thursday";
+            weekday[5] = "Friday";
+            weekday[6] = "Saturday";
+
+            let currentTime = new Date();
+            let day = weekday[currentTime.getDay()];
+            return day;
+
+        };
+
+        let getCurrentTime = () => {
+
+            var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            var now = new Date();
+            var month = months[now.getMonth()];
+            var date = now.getDate();
+
+            let hours = now.getHours();
+            let mins = now.getMinutes();
+
+            let period = "AM";
+
+            if (hours > 11)
+                period = "PM";
+            if (hours > 12)
+                hours = hours - 12;
+
+            if (mins < 10) {
+                mins = "0" + mins;
+            }
+            return `${month} ${date} | ${hours}:${mins} ${period}`;
+        };
+        curDate.innerHTML = getCurrentDay() + " | " + getCurrentTime();
+    </script>
+</body>
+
+</html>

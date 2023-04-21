@@ -1,0 +1,5 @@
+This is a file 
+We are streaming this file's data
+from server, when user make a request
+to server for read file in stream.
+file reading end.

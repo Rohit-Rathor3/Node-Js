@@ -1,0 +1,4 @@
+There are many type of inbuilt validations are available in Mongo, we can google it.
+like if i, talk about string validations 
+required, trim,minLength, maxLength , enum and many more
+same types of validations are available in many data types , Just Google THEm!!!!!!!!!!!! 

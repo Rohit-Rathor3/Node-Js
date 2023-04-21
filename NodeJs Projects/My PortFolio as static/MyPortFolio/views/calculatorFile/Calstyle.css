@@ -1,0 +1,42 @@
+h1 {
+    border: 5px;
+    background-color: aqua;
+    text-align: center;
+    padding: 5px;
+}
+
+#calc {
+    width: 160px;
+    background-color: greenyellow;
+    color: indigo;
+}
+
+.formstyle {
+    width: 300px;
+    height: 450px;
+    margin: auto;
+    border: 3px solid black;
+    padding-left: 100px;
+    background-color: lightgray;
+    border-radius: 50px;
+}
+
+h3 {
+    background-color: green;
+    color: rgb(255, 255, 255);
+    border: 7px solid gray;
+    padding: 5px;
+    margin: 5px;
+    font-size: large;
+    width: 300px;
+    text-align: center;
+}
+
+input {
+    background-color: green;
+    color: rgb(255, 255, 255);
+    border: 7px solid gray;
+    padding: 5px;
+    margin: 5px;
+    font-size: large;
+}

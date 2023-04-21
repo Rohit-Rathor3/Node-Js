@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./DinoIndex.js"></script>
+    <title>Dino Game</title>
+</head>
+
+<body onbeforeunload="feedback()">
+    <div class="container back back1">
+        <div class="gameover">Dino Adventures ! Level 1</div>
+        <div class="dino"></div>
+        <div id="score">Your Score : 0 </div>
+        <div class="mount mountAni"></div>
+
+    </div>
+    <script>
+        window.addEventListener("beforeunload", function(event) {
+            event.returnValue = "How was my project , did you like it?";
+        });
+    </script>
+</body>
+
+</html>

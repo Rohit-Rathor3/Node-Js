@@ -1,0 +1,14 @@
+{
+  "name": "weatherapi",
+  "version": "1.0.0",
+  "description": "creating a weather api ",
+  "main": "weatherApi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rohit Bhai",
+  "license": "ISC",
+  "dependencies": {
+    "requests": "^0.3.0"
+  }
+}

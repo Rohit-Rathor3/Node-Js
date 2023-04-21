@@ -1,0 +1,7 @@
+  It is stand for jsonwebToken.
+  It is used to authenticate user. It is provided by the server to the browser through cookies.
+  It generates a unique token (which is long string type). 
+  To use this, we have to install jsonwebtoken node pakages  from npm.
+  I am using jsonwebToken in my project.
+  Fore more details please Google It.
+  we will generate token at the time of singUp and SignIn.
